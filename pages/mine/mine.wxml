@@ -1,0 +1,40 @@
+<!--pages/mine/mine.wxml-->
+<view class="mine-wrapper">
+  <view class="header">
+      <view class="portrait">
+          <image src="../../images/icon/icon-protrait.png"></image>
+      </view>
+       <view class="user-info" wx:if="{{showLoginBtn}}">
+        <view class="name">{{ login12306Info.name }}</view>
+        <view class="login-btn" bindtap="loginMiniProgram">登陆一帐通</view>
+      </view>
+      <view class="user-info" wx:else>
+        <view class="name">{{ login12306Info.name }}</view>
+        <view class="status">{{ userInfo.statusText }}</view>
+      </view>
+     
+  </view>
+
+  <view class="main">
+    <view class="line-container" bindtap="bind12306Account">
+      <view class="container-left">
+        <image src="../../images/icon/icon-12306.png"></image>
+        <view class="title">12306账号管理</view>
+      </view>
+      <view class="container-right">
+          <view class="status">{{ bind12306Status ? '已绑定' : '未绑定'}}<text class="icon-go"></text></view>
+      </view>
+    </view>
+    <view class="line-container" bindtap="viewContacts">
+      <view class="container-left">
+        <image src="../../images/icon/icon-contacts.png"></image>
+        <view class="title">12306常用联系人管理</view>
+      </view>
+      <view class="container-right">
+          <view class="status"><text class="icon-go"></text></view>
+      </view>
+    </view>
+  </view>
+
+
+</view>

@@ -1,0 +1,5 @@
+<!--pages/demo/demo.wxml-->
+<view>
+  <text bindtap="add">加1</text>
+  {{count}}
+</view>

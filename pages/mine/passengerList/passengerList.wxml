@@ -1,0 +1,25 @@
+<!--pages/passenger.wxml-->
+<view class="passenger-wrapper">
+  <view class="main">
+    <form>
+        <view  class="passenger-list">
+          <view class="passenger"  wx:for="{{passengers}}" wx:key="id" data-id="{{item.id}} "bindtap="viewPassengerDetail">
+            <view class="passenger-left">
+            <view class="passenger-info">
+                <text class="name">{{ item.passengerName }}</text>
+                  <text class="status pass">已通过</text>
+              </view>
+              <text class="id-no">身份证：{{ item.idNo}}</text>              
+            </view>
+              <view class="passenger-right">
+                <view class="status"><text class="icon-go"></text></view>
+              </view>
+          </view>
+          </view>
+          <view class="footer">
+            <button class="submit-btn"  size="{{primarySize}}" loading="{{loading}}" 
+              disabled="{{disabled}}" bindtap="addPassenger">添加联系人</button>
+        </view>
+    </form>
+  </view>
+</view>
